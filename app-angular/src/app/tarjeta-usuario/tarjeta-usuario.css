@@ -1,0 +1,15 @@
+.tarjeta {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 14px;
+  background: #fff;
+}
+.tarjeta.favorita {
+  border-color: #f59e0b;
+  background: #fffbeb;
+}
+button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}

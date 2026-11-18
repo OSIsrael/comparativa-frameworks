@@ -1,0 +1,32 @@
+<main class="contenedor">
+  <h1>Directorio de Usuarios (Angular)</h1>
+
+  <div class="barra-controles">
+    <input
+      type="text"
+      [(ngModel)]="busqueda"
+      placeholder="Buscar usuario por nombre..."
+    />
+    <label>
+      <input type="checkbox" [(ngModel)]="soloFavoritos" />
+      Solo favoritos
+    </label>
+    <span class="contador">Favoritos: {{ favoritosIds.size }}</span>
+  </div>
+
+  @if (cargando) {
+    <p>Cargando...</p>
+  } @else if (error) {
+    <p class="error">{{ error }}</p>
+  } @else {
+    <div class="grid">
+      @for (user of usuariosFiltrados; track user.id) {
+        <app-tarjeta-usuario
+          [usuario]="user"
+          [esFavorito]="favoritosIds.has(user.id)"
+          (toggleFavorito)="alternarFavorito($event)"
+        />
+      }
+    </div>
+  }
+</main>

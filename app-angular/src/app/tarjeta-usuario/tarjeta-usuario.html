@@ -1,0 +1,8 @@
+<div class="tarjeta" [class.favorita]="esFavorito">
+  <h3>{{ usuario.name }}</h3>
+  <p><strong>Correo:</strong> {{ usuario.email }}</p>
+  <p><strong>Ciudad:</strong> {{ usuario.address?.city }}</p>
+  <button (click)="marcarFavorito()">
+    {{ esFavorito ? '★ Quitar favorito' : '☆ Favorito' }}
+  </button>
+</div>

@@ -1,0 +1,6 @@
+.contenedor { max-width: 960px; margin: 0 auto; padding: 20px; font-family: sans-serif; }
+.barra-controles { display: flex; gap: 15px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
+input[type="text"] { padding: 8px; flex: 1; min-width: 220px; }
+.contador { font-weight: bold; background: #e0f2fe; padding: 6px 12px; border-radius: 6px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.error { color: #dc2626; font-weight: bold; }
